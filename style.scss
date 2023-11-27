@@ -1,0 +1,534 @@
+@import 'vars';
+@import 'extends';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Lato;
+}
+  
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+  
+.header {
+    background-color: #222222;
+}
+  
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 19px;
+    padding-bottom: 18px;
+
+    &_left {
+        display: flex;
+        gap: 41px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &_right {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        justify-content: end;
+    }
+}
+    
+.main {
+    background-color: #f1e4e6;
+    @include centerFlex(flex, center, center);
+    flex-direction: row;
+    gap: 50px;
+    // align-content: center;
+    margin-bottom: 65px;
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+
+    &_title {
+        @extend %fontStyle;
+        color: #222;
+        font-size: 32px;
+        font-weight: 700;
+        width: 400px;
+        text-align: start;
+        border-left: 8px solid $colorSelectSite;
+        padding-left: 9px; 
+    }
+
+    &_the_brand {
+        font-size: 48px;
+        font-weight: 900;
+        display: block; 
+    }
+    &_fashion {
+        color: $colorSelectSite;
+    }
+}
+   
+.offer {
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 15px;
+
+    &_item {
+        position: relative; 
+    }
+
+    &_content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        @include centerFlex(flex, center, center);
+        flex-direction: column;
+    }
+
+    &_item_big {
+        grid-column: 1 / 4;
+        height: 180px;
+        position: relative; 
+    }
+
+    &_subtitle {
+        @extend %fontStyle;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &_title {
+        @extend %fontStyle;
+        color: $colorSelectSite;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+  
+.offer_img, .offer_img_big, .product_img, .main_left_photo {
+    width: 100%;
+}
+    
+.product {
+    background: #fff;
+
+    &_items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        padding-bottom: 63px;  
+    }
+
+    &_item {
+        @include centerFlex(flex, center, center);
+        flex-direction: column;
+        position: relative; 
+    }
+
+    &_title {
+        @extend %fontStyle;
+        color: #222;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 6px;
+    }
+
+    &_desc {
+        @extend %fontStyle;
+        color: #9f9f9f;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 49px; 
+    }
+
+    &_subtitle {
+        @extend %fontStyle;
+        color: #000;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &_text {
+        @extend %fontStyle;
+        color: #5d5d5d;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &_price {
+        @extend %fontStyle;
+        color: $colorSelectSite;
+        font-size: 16px;
+        font-weight: 400; 
+    }
+
+    &_feature {
+        background-color: #f8f8f8;
+        display: flex;
+        padding: 24px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    &_add_to_cart {
+        display: none;
+        position: absolute;
+        top: 188px;
+        left: 111px;
+    }
+
+    &_link {
+        @include centerFlex(flex, center, center);
+    }
+    &_link_button {
+        @extend %fontStyle;
+        color: $colorSelectSite;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 212px;
+        padding: 1rem 2rem;
+        border: 1px solid $colorSelectSite;
+        margin-bottom: 75px;
+        text-align: center;
+    }
+
+    &_item:hover .product_add_to_cart {
+        display: flex;
+        transition: ease-in-out 0.5s;
+    }
+
+    &__cart_img:hover {
+        transition: transform ease-in-out 0.5s;
+        transform: scale(1.2);
+        background-color: $colorSelectSite;
+    }
+
+    &_item:hover .product_img {
+        filter: brightness(0.5);
+        transition: ease-in-out 0.5s;
+    }
+
+    &_link_button:hover {
+        color: #FFF;
+        background-color: $colorSelectSite;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+  
+  
+.delivery {
+    background-color: #222224;
+    @include centerFlex(flex, center, center);
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 105px;
+
+    &_items {
+        @include centerFlex(flex, center, center);
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 19px; 
+    }
+
+    &_subtitle {
+        @extend %fontStyle;
+        color: #fbfbfb;
+        font-size: 19.96px;
+        font-weight: 400;
+    }
+
+    &_text {
+        @extend %fontStyle;
+        color: #fbfbfb;
+        text-align: center;
+        font-size: 13.972px;
+        font-weight: 300;
+    }
+}
+
+.subscribe {
+    &_content {
+        background-image: url(img/subscribe_photo.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    &_container {
+        height: 100%;
+        background: rgba(244, 244, 244, 0.7);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 226px;
+    }
+    &_left {
+        @include centerFlex(flex, center, center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 96px;
+        gap: 30px;
+        margin-bottom: 126px;
+    }
+
+    &_left_text {
+        @extend %fontStyle;
+        width: 360px;
+        color: #222224;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &_right {
+        @include centerFlex(flex, center, center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    &_button {
+        @include centerFlex(flex, center, center);
+        padding-top: 30px;
+    }
+
+    &__input {
+        border-radius: 24.5px 0 0 24.5px;
+        fill: #e1e1e1;
+        border: none;
+    }
+
+    &_btn {
+        background-color: $colorSelectSite;
+        width: 100px;
+        height: 49px;
+        border-radius: 0 24.5px 24.5px 0;
+        border: none;
+    }
+}  
+
+  
+.footer_promo {
+    background-color: #222224;
+    display: flex;
+    justify-content: space-between;
+
+    &_left_text {
+        @extend %fontStyle;
+        color: #fbfbfb;
+        font-size: 16px;
+        font-weight: 400;
+        width: 332px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &_right {
+        padding-top: 24px;
+        @include centerFlex(flex, end, center);
+        gap: 7px;
+    }
+    &_link:hover path {
+        fill: $colorSelectSite;
+        transition: 0.5s ease-out;
+    }
+
+}
+
+  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .center {
+      padding-left: calc(50% - 383px);
+      padding-right: calc(50% - 383px);
+    }
+  
+    .main {
+      padding-left: calc(50% - 600px);
+      padding-right: calc(50% - 600px);
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  
+    .main_left_photo {
+      max-width: 386px;
+    }
+  
+    .the_brand {
+      font-size: 44px;
+      font-weight: 900;
+    }
+  
+    .main_title {
+      font-size: 24px;
+      font-weight: 700;
+      width: 283px;
+    }
+  
+    .offer {
+      gap: 20px;
+    }
+  
+    .offer_item_big {
+      height: 116px;
+    }
+  
+    .product_items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 17px;
+      padding-bottom: 33px;
+    }
+  
+    .delivery {
+      flex-direction: column;
+      gap: 48px;
+      padding-top: 48px;
+      padding-bottom: 64px;
+    }
+  
+    .delivery_text {
+      width: 360px;
+    }
+  
+    .subsribe_content {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .subscribe_container {
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 48px;
+      padding-bottom: 140px;
+    }
+  
+    .subscribe_left {
+      margin-top: 64px;
+      margin-bottom: 60px;
+    }
+}
+  
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .center {
+      padding-left: calc(50% - 160px);
+      padding-right: calc(50% - 160px);
+    }
+  
+    .main_left {
+      display: none;
+    }
+  
+    .main_right {
+      height: 360px;
+      width: 375px;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+    }
+  
+    .main_title {
+      font-size: 20px;
+      width: 250px;
+    }
+  
+    .the_brand {
+      font-size: 38px;
+    }
+
+    .offer {
+      display: grid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+  
+    .offer_item_big {
+      height: 111px;
+    }
+  
+    .offer_img_big {
+      height: 111px;
+      width: 320px;    
+      object-fit: cover;
+    }
+  
+    .product_items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 40px;
+    }
+  
+    .delivery {
+      flex-direction: column;
+      gap: 48px;
+    }
+  
+    .subscribe_container {
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 48px;
+      padding-bottom: 110px;
+      
+    }
+  
+    .subscribe_left {
+      margin-top: 64px;
+      margin-bottom: 60px;
+    }
+  
+    .footer_promo {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    
+    .footer_promo_right {
+      padding-top: 43px;
+    }
+  
+    .footer_promo_left_text {
+      text-align: center;
+    }
+    
+}
+  
