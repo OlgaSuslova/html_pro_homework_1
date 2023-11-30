@@ -15,6 +15,14 @@ a {
 body {
     font-family: Lato;
 }
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
   
 .center {
     padding-left: calc(50% - 570px);
@@ -68,12 +76,14 @@ body {
         text-align: start;
         border-left: 8px solid $colorSelectSite;
         padding-left: 9px; 
+        
+        
     }
 
     &_the_brand {
         font-size: 48px;
         font-weight: 900;
-        display: block; 
+        display: block;         
     }
     &_fashion {
         color: $colorSelectSite;
@@ -135,6 +145,13 @@ body {
         grid-template-rows: repeat(2, 1fr);
         gap: 30px;
         padding-bottom: 63px;  
+    }
+    &_items_catalog {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        padding-bottom: 63px;
     }
 
     &_item {
@@ -233,6 +250,13 @@ body {
         color: #FFF;
         background-color: $colorSelectSite;
         transition: ease-in-out 0.5s;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 96px;
     }
 }
 
@@ -333,7 +357,6 @@ body {
     }
 }  
 
-  
 .footer_promo {
     background-color: #222224;
     display: flex;
@@ -360,6 +383,172 @@ body {
     }
 
 }
+
+.top-head {
+  background: #f8f3f4;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__heading {
+      font-style: normal;
+      font-weight: 400px;
+      font-size: 24px;
+      line-height: 29px;
+      color: $colorSelectSite;
+  }
+}
+
+.breadcrumbs__link {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+
+  &_site {
+      font-weight: 700;
+      color: $colorSelectSite;
+  }
+}
+
+.filter-sort {
+  height: 132px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  gap: 30px;
+  padding-top: 39px;
+}
+
+.filter {
+  padding-top: 13px;
+  width: 360px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+
+  &__content {
+      background-color: #fff;
+      padding: 0, 16px, 16px, 16px;
+  }
+
+  &[open] {
+      background: #FFF;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
+
+  &[open] .filter__heading {
+      color: $colorSelectSite;
+  }
+
+  &[open] path {
+      fill: $colorSelectSite;
+  }
+
+  &__summary {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding-left: 16px;
+  }
+  &__heading {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000;
+  }
+  
+  &__item {
+      margin-top: 16px;
+  }
+
+  &__item[open] .filter__heading-item {
+      color: $colorSelectSite;
+  }
+
+  &__heading-item {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6f6e6e;
+      padding: 8px 11px 11px 11px;
+      border-bottom: 1px solid #ebebeb;
+      border-left: 5px solid $colorSelectSite;
+  }
+
+  &__link-box {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      padding: 24px 16px;
+  }
+
+  &__link {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6f6e6e;
+      &:hover {
+          color: $colorSelectSite
+      }
+  }
+}
+
+.sort {
+  padding-top: 12px;
+  display: flex;
+  gap: 18px; 
+
+  &__details {
+      position: relative;
+  }
+
+  &__summary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  &__heading {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: #6f6e6e; 
+  }
+
+  &__box {
+      background: #FFF;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      padding: 7px 30px 11px 9px;
+      position: absolute;
+      left: -9px;
+      top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+  }
+
+  &__check {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #6f6e6e;
+  }
+
+}
+
+
 
   
 @media screen and (min-width: 768px) and (max-width: 1024px) {
