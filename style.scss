@@ -146,10 +146,19 @@ summary::-webkit-details-marker {
         gap: 30px;
         padding-bottom: 63px;  
     }
+
     &_items_catalog {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        padding-bottom: 63px;
+    }
+
+    &_items_product {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         gap: 30px;
         padding-bottom: 63px;
     }
@@ -545,6 +554,126 @@ summary::-webkit-details-marker {
       line-height: 16px;
       color: #6f6e6e;
   }
+
+}
+
+.product__photo {
+    background-color: #F7F7F7;;
+    
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link_left:hover path {
+        fill: $colorSelectSite;
+    }
+
+    &__link_right:hover path {
+        fill: #000;
+    }
+    
+}
+
+
+.dsc {
+    
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        // width: 650px;  
+    }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #EAEAEA;
+        margin-bottom: 65px;
+        
+    }
+
+    &__subtitle {
+        color: $colorSelectSite;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 64px;
+        margin-bottom: 13px;
+        @extend %fontStyle;
+    }
+
+    &__title {
+        color: #4D4D4D;
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 12px;
+        margin-bottom: 48px;
+        @extend %fontStyle;
+    }
+
+    &__paragraph {
+        max-width: 555px;
+        text-align: center;
+        color: #5E5E5E;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %fontStyle;
+        margin-bottom: 32px;
+    }
+
+    &__price {
+        color: #EF5B70;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontStyle;
+        margin-bottom: 65px;
+
+    }
+
+    &__sort {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+        margin-bottom: 43px;
+    }
+
+    &__sort-text {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-weight: 400;
+        @extend %fontStyle;
+        display: block;
+    }
+
+    &__button {
+        width: 212px;
+        height: 48px;
+        border: 1px solid $colorSelectSite;
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        align-items: center;
+        gap: 23px;
+        margin-bottom: 64px;
+
+
+    }
+
+    &_add {
+        color: $colorSelectSite;
+        font-size: 16px;
+        font-weight: 400;
+        @extend %fontStyle;
+    }
+
 
 }
 
