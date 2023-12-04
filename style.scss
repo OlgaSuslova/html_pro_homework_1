@@ -678,6 +678,81 @@ summary::-webkit-details-marker {
 }
 
 
+.top-cart {
+    margin-top: 96px;
+    margin-bottom: 128px;
+
+    &__card {
+        background: #FFF;
+        width: 652px;
+        height: 306px;
+        display: flex;
+        justify-content: space-between;
+        filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); 
+        margin-bottom: 40px;    
+    }
+
+    &__img-left {
+        width: 100%;
+    }
+
+    &__card-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 22px;
+        // margin-left: 31px;
+    }
+
+    &__title {
+        color: #222;
+        font-size: 24px;
+        font-weight: 400;
+        @extend %fontStyle;
+        width: 190px;
+        margin-bottom: 40px;        
+    }
+
+    &__select {
+        color: $colorSelectSite;
+    }
+
+    &__text {
+        color: #575757;
+        font-size: 22px;
+        font-weight: 400;
+        @extend %fontStyle;
+        margin-bottom: 6px;
+    }
+
+    &__right {
+        margin: 28px 28px 50px 70px; 
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 652px;
+        margin-top: 30px;
+    }
+    &__button {
+        color: #000;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %fontStyle;
+        padding: 15px 40px 19px 39px;
+        border: solid 1px #A4A4A4;
+        width: 240px;
+        height: 50px;
+        margin-top: 30px;
+    }
+
+    &__button:hover {
+        color: $colorSelectSite;
+    }
+}
+
+
 
   
 @media screen and (min-width: 768px) and (max-width: 1024px) {
