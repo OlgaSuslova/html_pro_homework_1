@@ -892,6 +892,164 @@ summary::-webkit-details-marker {
 
 }
 
+.registration {
+    display: flex;
+    justify-content: space-between;
+    gap: 140px;
+    margin-top: 65px;
+    margin-bottom: 95px;
+
+    
+
+    &__subtitle {
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontStyle;
+    }
+
+    &__text {
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontStyle;
+    }
+
+    &__list {
+        list-style-image: url(img/vector.svg);
+    }
+
+    &__list_li {
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %fontStyle;
+        padding-left: 22px;
+        
+    }
+
+}
+
+.registration-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+    
+    &__text {
+        color: #222;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    &__input {
+        max-width: 360px;
+        border: 1px solid #A4A4A4;
+        padding: 13px 277px 16px 17px;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__male {
+        display: flex;
+        justify-content: start;
+        gap: 20px;   
+        
+        &_input {
+            padding-left: 10px;
+        }
+
+        &_text {
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-align: center;
+        }
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_text {
+            color: #222;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            &_p {
+                color: #B1B1B1;
+                font-size: 13px;
+                margin-top: -5px;
+            }
+        }
+        
+        &_input {
+            max-width: 360px;
+            border: 1px solid #A4A4A4;
+            padding: 13px 277px 16px 17px;
+            color: #B1B1B1;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+
+    &__link {
+        &_btn {
+            background-color: $colorSelectSite;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 16px 20px;
+            width: 167px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid $colorSelectSite;
+        }
+
+        &_btn:hover {
+            background-color: #fff;
+            color: $colorSelectSite;
+            border: 1px solid $colorSelectSite;
+            fill: $colorSelectSite;
+        }
+        &_btn:hover path {
+            fill: $colorSelectSite;
+        }
+    }
+
+
+
+
+    
+
+}
+
 
 
   
