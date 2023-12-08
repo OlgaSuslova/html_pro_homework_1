@@ -132,7 +132,7 @@ summary::-webkit-details-marker {
     }
 }
   
-.offer_img, .offer_img_big, .product_img, .main_left_photo {
+.offer_img, .offer_img_big, .product_img, .main_left_photo, .product__cart_img {
     width: 100%;
 }
     
@@ -268,9 +268,7 @@ summary::-webkit-details-marker {
         margin-bottom: 96px;
     }
 }
-
-  
-  
+ 
 .delivery {
     background-color: #222224;
     @include centerFlex(flex, center, center);
@@ -443,7 +441,6 @@ summary::-webkit-details-marker {
     }
 }
 
-
 .filter-sort {
   height: 132px;
   position: relative;
@@ -579,7 +576,8 @@ summary::-webkit-details-marker {
 }
 
 .product__photo {
-    background-color: #F7F7F7;;
+    background-color: #F7F7F7;
+    position: relative;
     
     &_container {
         display: flex;
@@ -599,7 +597,10 @@ summary::-webkit-details-marker {
 
 
 .dsc {
-    
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
 
     &__box {
         display: flex;
@@ -607,7 +608,9 @@ summary::-webkit-details-marker {
         flex-direction: column;
         justify-content: center;  
         align-items: center;
-        // width: 650px;  
+        position: relative; 
+        margin-top: -65px;
+        background-color: #fff;
     }
 
     &__text {
@@ -683,7 +686,7 @@ summary::-webkit-details-marker {
         padding: 15px;
         align-items: center;
         gap: 23px;
-        margin-bottom: 64px;
+        
 
 
     }
@@ -695,9 +698,7 @@ summary::-webkit-details-marker {
         @extend %fontStyle;
     }
 
-
 }
-
 
 .top-cart {
     margin-top: 96px;
@@ -715,7 +716,6 @@ summary::-webkit-details-marker {
         display: flex;
         justify-content: space-between;
         gap: 30px;
-
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13); 
         margin-bottom: 40px;    
     }
@@ -916,6 +916,7 @@ summary::-webkit-details-marker {
     }
 
     &__list {
+        list-style:inside;
         list-style-image: url(img/vector.svg);
     }
 
@@ -924,7 +925,8 @@ summary::-webkit-details-marker {
         font-size: 24px;
         font-weight: 300;
         @extend %fontStyle;
-        padding-left: 22px;
+        // padding-left: 22px;
+        margin-bottom: 1em;
         
     }
 
@@ -1050,9 +1052,6 @@ summary::-webkit-details-marker {
 
 }
 
-
-
-  
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .center {
       padding-left: calc(50% - 383px);
@@ -1089,7 +1088,7 @@ summary::-webkit-details-marker {
       height: 116px;
     }
   
-    .product_items {
+    .product_items, .product_items_catalog {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -1125,6 +1124,75 @@ summary::-webkit-details-marker {
       margin-top: 64px;
       margin-bottom: 60px;
     }
+
+    .dsc__box {
+        margin-top: 0;
+    }
+
+    .product_items_product {
+        grid-template-columns: repeat(2, 1fr);        
+    }
+
+    .product_item_none {
+        display: none;
+    }
+
+    .top-cart {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 140px;
+
+    }
+
+    .top-cart__card {
+        width: 734px;
+        gap: 15px;
+    }
+
+    .top-cart__left-block {
+        margin-bottom: 80px;
+        width: 734px;
+    }
+
+    .top-cart__buttons {
+        width: 734px;
+        justify-content: center;
+        gap: 48px;
+    }
+
+
+    .top-cart__right-block {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 734px;
+    }
+
+    .top-cart__total {
+        margin-top: 55px;
+        width: 360px;
+    }
+
+    .registration {
+        margin-top: 40px;
+        gap: 40px;
+    }
+
+    .registration__subtitle {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .registration__text {
+        font-size: 16px;
+    }
+
+    .registration__list_li {
+        font-size: 16px;
+    }
+
 }
   
 @media screen and (min-width: 320px) and (max-width: 767px) {

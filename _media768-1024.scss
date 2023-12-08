@@ -1,0 +1,73 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .center {
+      padding-left: calc(50% - 383px);
+      padding-right: calc(50% - 383px);
+    }
+  
+    .main {
+      padding-left: calc(50% - 600px);
+      padding-right: calc(50% - 600px);
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  
+    .main_left_photo {
+      max-width: 386px;
+    }
+  
+    .the_brand {
+      font-size: 44px;
+      font-weight: 900;
+    }
+  
+    .main_title {
+      font-size: 24px;
+      font-weight: 700;
+      width: 283px;
+    }
+  
+    .offer {
+      gap: 20px;
+    }
+  
+    .offer_item_big {
+      height: 116px;
+    }
+  
+    .product_items, .product_items_catalog {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 17px;
+      padding-bottom: 33px;
+    }
+  
+    .delivery {
+      flex-direction: column;
+      gap: 48px;
+      padding-top: 48px;
+      padding-bottom: 64px;
+    }
+  
+    .delivery_text {
+      width: 360px;
+    }
+  
+    .subsribe_content {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .subscribe_container {
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 48px;
+      padding-bottom: 140px;
+    }
+  
+    .subscribe_left {
+      margin-top: 64px;
+      margin-bottom: 60px;
+    }
+}
